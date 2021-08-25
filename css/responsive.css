@@ -1,0 +1,126 @@
+/*------------------------------------*\
+  #Footer @Media
+\*------------------------------------*/
+@media only screen and (min-width: 600px) {
+    header {
+        top: 34px;
+        border-radius: 16px;
+        margin: 0 21px;
+        position: absolute;
+        width: calc(100% - 42px);
+    }
+
+    section {
+        border-radius: 10px;
+        padding: 0 15px 55px 15px;
+        margin-top: 74px;
+    }
+
+    .page--position {
+        padding: 61px 0 0 51px;
+    }
+
+    .section__title {
+        margin: 29px 0 34px 0;
+        font-size: 34px;
+    }
+
+    .section__desc {
+        font-size: 21px;
+        margin-bottom: 55px;
+    }
+
+    .reg__cont {
+        width: 444px;
+        margin: 0 auto;
+    }
+
+    .container {
+        font-size: 16px;
+    }
+
+    .modal-content {
+        margin: 0 51px;
+    }
+
+    .item1 {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .item2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .item3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .item4 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .item2, .item3, .item4 {
+        margin-top: 0;
+        display: flex;
+    }
+    .footer--line:nth-child(n+2) {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .navigation {
+        display: inline-block;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .menu-popup {
+        display: none;
+    }
+
+    .modal-content {
+        margin: 0 auto;
+    }
+    footer {
+        float: right;
+        padding: 140px 0 100px 0;
+    }
+    .item2 .footer--line, .item3 .footer--line, .footer--line--abs{
+        display: none;
+    }
+
+    .item2 {
+        border-right: 2px solid rgba(32, 38, 49, 0.1);
+        border-left: 2px solid rgba(32, 38, 49, 0.1);
+        height: 140%;
+        margin-right: 26px;
+        padding: 0 26px;
+    }
+    .item1 {
+        grid-column: 3 / span 4;
+        grid-row: 1;
+    }
+
+    .item2 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .item3 {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        padding: 0 26px;
+    }
+
+    .item4 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+

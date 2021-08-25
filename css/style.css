@@ -1,0 +1,527 @@
+/**
+ * CONTENTS
+ *
+ * REGISTRATION
+ * Global...............Globally-available variables and config.
+ *
+ * Header........this is header section.
+ * Section...........this is registration form section.
+ * Section-2...........this is registration popup.
+ * Footer...........this is page footer
+ *
+ */
+
+
+
+/*------------------------------------*\
+  #Global
+\*------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #7279FF;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+input,
+button {
+    outline: none;
+}
+
+body {
+    background-color: #F8F8FC;
+}
+.d-none {
+    display: none;
+}
+
+
+
+
+/*------------------------------------*\
+  #Header
+\*------------------------------------*/
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 20px 15px;
+    box-shadow: 0px 0px 30px #2026310D;
+}
+
+.content--left {
+    position: relative;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+#menu-btn {
+    padding: 6px;
+    background: none;
+    border: none;
+}
+#profile-img--letter {
+    position: absolute;
+    font-size: 28px;
+    font-family: FiraGo-bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.navigation {
+    display: none;
+}
+
+.login {
+    width: 106px;
+    height: 40px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px 0 20px;
+    font-size: 16px;
+    font-family: FiraGo-Medium;
+}
+
+.search {
+    width: 40px;
+    height: 40px;
+    background-color: #F1F2F4;
+    border: none;
+    border-radius: 8px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 264px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation ul li, .navigation__element--little{
+    font-size: 16px;
+    font-family: FiraGo-Medium;
+}
+
+.nav--action {
+    color: var(--main-color)
+}
+.menu-popup {
+    position: absolute;
+    top: 65px;
+    right: 190px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px #2026310D;
+    border-radius: 8px;
+    padding: 20px;
+}
+.navigation__element--little:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+/*------------------------------------*\
+  #Section
+\*------------------------------------*/
+
+section {
+    background-color: #FFFFFF;
+    border-radius: 0 0 10px 10px;
+    padding: 21px 15px 55px 15px;
+}
+
+.page--position p {
+    font-size: 14px;
+    font-family: FiraGo-Bold;
+    color: #202631;
+    display: inline-block;
+}
+
+.page--position--direction {
+    margin: 0 10px;
+}
+
+.section__title {
+    font-size: 21px;
+    font-family: FiraGo-Bold;
+    color: #202631;
+    margin: 34px 0 21px 0;
+    text-align: center;
+}
+
+.section__desc {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 16px;
+    font-family: FiraGo-Regular;
+    line-height: 24px;
+}
+
+.label-txt {
+    display: block;
+    font-size: 16px;
+    font-family: FiraGo-Medium;
+    margin: 34px 0 13px 0;
+}
+
+.element--red {
+    color: #E74C3C;
+}
+
+.input-cont {
+    background-color: white;
+    color: #E5E3F0;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+}
+.pass-box {
+    position: relative;
+}
+#togglePassword, #togglePassword-re {
+    position: absolute;
+    top: 41px;
+    right: 20px;
+}
+.registratio--conditions {
+    margin-top: 34px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    line-height: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: FiraGo-Medium;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #E5E3F0;
+    border: 1px solid var(--main-color);
+    border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+    background-color: var(--main-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.reg-btn {
+    width: 100%;
+    height: 40px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: FiraGo-Medium;
+}
+
+.registration--other-means {
+    margin: 34px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.or-line {
+    border-bottom: 2px dashed var(--main-color);
+    width: 35%;
+}
+
+#fb-btn,
+#gmail-btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: FiraGo-Medium;
+}
+
+#fb-btn {
+    background-color: #39579A;
+}
+
+#gmail-btn {
+    background-color: #D54B3D;
+    margin: 21px 0 34px 0;
+}
+
+.ask--reg,
+.ask--reg--link {
+    text-align: center;
+    font-size: 16px;
+    font-family: FiraGo-Regular;
+}
+
+.auth-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 43px;
+}
+
+
+
+/*------------------------------------*\
+  #Section-2 popup
+\*------------------------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(114, 121, 255, 0.8);
+}
+
+/* Modal Content */
+.modal-content {
+    max-width: 1082px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 15px;
+    padding: 54px 20px 34px 20px;
+    border-radius: 16px;
+}
+
+/* The Close Button */
+.close-btn {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.close {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 21px;
+    font-family: FiraGo-Bold;
+    margin-bottom: 34px;
+}
+
+.my-info-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.my-info-cont ul:last-child {
+    margin-left: 20px;
+}
+
+.modal-content .key--list li {
+    color: rgba(32, 38, 49, 0.6);
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: FiraGO-Medium;
+}
+
+.out__myinfo {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: FiraGO-Regular;
+    color: #202631;
+}
+
+/* Dropdown*/
+
+.dropdown-el {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    min-height: 40px;
+    max-height: 0;
+    overflow: hidden;
+    top: 0.5em;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #444;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    transition: 0.3s all ease-in-out;
+}
+
+.dropdown-el input {
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.01;
+}
+
+.dropdown-el label {
+    display: block;
+    height: 2em;
+    line-height: 40px;
+    padding-left: 1em;
+    padding-right: 3em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s color ease-in-out;
+}
+
+.dropdown-el label:nth-child(2) {
+    margin-top: 40px;
+}
+
+.dropdown-el input:checked+label {
+    display: block;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.dropdown-el input:checked+label:nth-child(2) {
+    margin-top: 0;
+    position: relative;
+}
+
+.dropdown-el::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    top: 15px;
+    border: 0.5em solid var(--main-color);
+    border-color: var(--main-color) transparent transparent transparent;
+    transition: 0.4s all ease-in-out;
+}
+
+.dropdown-el.expanded {
+    border: 1px solid var(--main-color);
+    background: #fff;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0px;
+    max-height: 1000px;
+}
+
+.dropdown-el.expanded label:hover {
+    color: var(--main-color);
+}
+
+.dropdown-el.expanded input:checked+label {
+    color: var(--main-color);
+}
+
+
+/*------------------------------------*\
+  #Footer
+\*------------------------------------*/
+footer {
+    display: grid;
+    font-size: 14px;
+    font-family: FiraGo-Regular;
+    padding: 34px 15px 24px 15px;
+}
+.cont-mail {
+    font-size: 16px;
+}
+.item1 {
+    display: flex;
+    margin-bottom: 34px;
+}
+.footer--line, .footer--line--abs{
+    width: 1px;
+    height: 20px;
+    background-color: #202631;
+    margin: 0 30px;
+}
+
+.item2 .footer--line, .item3 .footer--line, .footer--line--abs{
+    display: none;
+}
+.item1 i {
+    margin-right: 20px;
+}
+.item3, .item4 {
+    margin-top: 21px;
+}

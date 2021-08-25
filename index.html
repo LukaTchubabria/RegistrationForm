@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Registration">
+    <meta name="keywords" content="Registration">
+    <meta name="author" content="Luka Tchubabria">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <header>
+        <div class="content--left">
+            <img id="profile-img" src="./img/Icon awesome-kickstarter.svg" alt="avatar">
+            <p id="profile-img--letter">ს</p>
+        </div>
+        <div class="content--right">
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li class="navigation__element nav--action">ჩვენზე</li>
+                        <li class="navigation__element">თემები</li>
+                        <li class="navigation__elements">რესურსები</li>
+                    </ul>
+                </nav>
+                <button id="menu-btn">
+                    <i class="icon-icons8-menu"></i>
+                </button>
+                <button class="login">
+                    <i class="icon-Icon-metro-user"></i>
+                    შესვლა
+                </button>
+                <button class="search">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="menu-popup d-none">
+            <nav>
+                <ul>
+                    <li class="navigation__element--little nav--action">ჩვენზე</li>
+                    <li class="navigation__element--little">თემები</li>
+                    <li class="navigation__element--little">რესურსები</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="page--position">
+            <p>მთავარი</p>
+            <p class="page--position--direction">></p>
+            <p>რეგისტრაცია</p>
+        </div>
+        <div class="reg__cont">
+            <h1 class="section__title">რეგისტრაცია</h1>
+            <p class="section__desc">ავტორიზაცია შესაძლებელია მხოლოდ განმანათლებლებისთვის</p>
+            <form id="form" onsubmit="return false;">
+                <div class="form__content">
+                    <label class="label-txt" for="place">რეგიონი <span class="element--red">*</span></label>
+                    <span class="dropdown-el">
+                        <input type="radio" name="sortplace" value="choose" checked="checked" id="sort-place">
+                        <label for="sort-place">აირჩიეთ რეგიონი</label>
+                        <input type="radio" name="sortplace" value="tbilisi" id="tbilisi">
+                        <label for="tbilisi">თბილისი</label>
+                        <input type="radio" name="sortplace" value="abkhazia" id="abkhazia">
+                        <label for="abkhazia">აფხაზეთი</label>
+                        <input type="radio" name="sortplace" value="adjara" id="adjara">
+                        <label for="adjara">აჭარა</label>
+                        <input type="radio" name="sortplace" value="guria" id="guria">
+                        <label for="guria">გურია</label>
+                        <input type="radio" name="sortplace" value="imereti" id="imereti">
+                        <label for="imereti">იმერეთი</label>
+                        <input type="radio" name="sortplace" value="kakheti" id="kakheti">
+                        <label for="kakheti">კახეთი</label>
+                        <input type="radio" name="sortplace" value="mtskheta-mtianeti" id="mtskheta-mtianeti">
+                        <label for="mtskheta-mtianeti">მცხეთა-მთიანეთი</label>
+                        <input type="radio" name="sortplace" value="racha-lechkhumi-kvemo-svaneti" id="racha-lechkhumi-kvemo-svaneti">
+                        <label for="racha-lechkhumi-kvemo-svaneti">რაჭა-ლეჩხუმი და</label>
+                        <input type="radio" name="sortplace" value="samegrelo-zemo-svaneti" id="samegrelo-zemo-svaneti">
+                        <label for="samegrelo-zemo-svaneti">სამეგრელო-ზემო სვანეთი</label>
+                        <input type="radio" name="sortplace" value="samtskhe–javakheti" id="samtskhe–javakheti">
+                        <label for="samtskhe–javakheti">სამცხე-ჯავახეთი</label>
+                        <input type="radio" name="sortplace" value="kvemo-kartli" id="kvemo-kartli">
+                        <label for="kvemo-kartli">ქვემო ქართლი</label>
+                        <input type="radio" name="sortplace" value="shida-kartli" id="shida-kartli">
+                        <label for="shida-kartli">შიდა ქართლი</label>
+                    </span>
+                </div>
+                <div class="form__content">
+                    <label class="label-txt" for="fname">პოზიცია <span class="element--red">*</span></label>
+                    <span class="dropdown-el">
+                        <input type="radio" name="sort-position" value="Relevance" checked="checked" id="sort-position">
+                        <label for="sort-position">აირჩიეთ პოზიცია</label>
+                        <input type="radio" name="sort-position" value="teacher" id="teacher">
+                        <label for="teacher">მასწავლებელი</label>
+                        <input type="radio" name="sort-position" value="policeman" id="policeman">
+                        <label for="policeman">სამართალდამცავი</label>
+                        <input type="radio" name="sort-position" value="other" id="other">
+                        <label for="other">სხვა</label>
+                    </span>
+                </div>
+                <!-- <div class="form__content">
+                    <label class="label-txt" for="fname">First name: <span class="element--red">*</label>
+                    <input class="input-cont" type="text" id="" name="" value="">
+                </div> -->
+                <div class="form__content">
+                    <label class="label-txt" for="work-place">სამუშაო ადგილი </label>
+                    <input class="input-cont" type="text" id="work-place" name="workplace">
+                </div>
+                <div class="form__content">
+                    <label class="label-txt" for="fname">ელ.ფოსტა <span class="element--red">*</label>
+                    <input class="input-cont" type="text" id="mail" name="">
+                </div>
+                <div class="form__content">
+                    <label class="label-txt" for="fname">სახელი <span class="element--red">*</label>
+                    <input class="input-cont" type="text" id="name">
+                </div>
+                <div class="form__content">
+                    <label class="label-txt" for="fname">გვარი <span class="element--red">*</label>
+                    <input class="input-cont pass" type="text" id="lname" name="">
+                </div>
+                <div class="form__content pass-box">
+                    <label class="label-txt" for="fname">პაროლი <span class="element--red">*</label>
+                    <i id="togglePassword" class="icon-eyex"></i>
+                    <input class="input-cont" type="password" id="password" name="password">
+                </div>
+                <div class="form__content pass-box">
+                    <label class="label-txt" for="fname">გაიმერეოთ პაროლი <span class="element--red">*</label>
+                    <i id="togglePassword-re" class="icon-eyex"></i>
+                    <input class="input-cont pass" type="password" id="password-re" name="password-re">
+                </div>
+                <div class="registratio--conditions">
+                    <label class="container">
+                        <input id="reg-conditions" type="checkbox">
+                        <span class="checkmark"></span>
+                        ვეთანხმები პლატფორმის <a href="#">მომხმარების პირობებს</a>
+                    </label>
+                </div>
+                <div class="registratio--politics">
+                    <label class="container">
+                        <input id="reg-politics" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                        გავეცანი <a href="#">კონფიდენციალურობის პოლიტიკას</a>
+                    </label>
+                </div>
+                <input id="myBtn" class="reg-btn" type="button" value="რეგისტრაცია">
+            </form>
+            <div class="registration--other-means">
+                <div class="or-line"></div>
+                <p>ან</p>
+                <div class="or-line"></div>
+            </div>
+            <button id="fb-btn">
+                <i class="icon-fbwhite"></i>
+                რეგისტრაცია Facebook-ით
+            </button>
+            <button id="gmail-btn">
+                <i class="icon-google"></i>
+                რეგისტრაცია Gmail-ით
+            </button>
+            <div class="auth-txt">
+                <p class="ask--reg">უკვე რეგისტრირებული ხართ?</p>
+                <a class="ask--reg--link" href="#">მიყევი ამ ბმულს <i></i></a>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <button class="close-btn">
+                <span class="close">&times;</span>
+            </button>
+            <h2 class="modal-title">რეგისტრაცია</h2>
+            <div class="my-info-cont">
+                <ul class="key--list">
+                    <li>სახელი:</li>
+                    <li>გვარი:</li>
+                    <li>რეგიონი:</li>
+                    <li>პოზიცია:</li>
+                    <li>ელ.ფოსტა:</li>
+                </ul>
+                <ul>
+                    <li class="out__myinfo" id="txt-name"> </li>
+                    <li class="out__myinfo" id="txt-lname"> </li>
+                    <li class="out__myinfo" id="txt-place"> </li>
+                    <li class="out__myinfo" id="txt-position"> </li>
+                    <li class="out__myinfo" id="txt-mail"> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer--line--abs"></div>
+        <div class="item1">
+            <p class="cont-mail">info@school.ge</p>
+            <div class="footer--line"></div>
+            <i class="icon-facebook"></i>
+            <i class="icon-youtube"></i>
+        </div>
+        <div class="item2">
+            <p>მოხმარების პირობები</p>
+            <div class="footer--line"></div>
+        </div>
+        <div class="item3">
+            <p class="item3">კონფიდენციალურობა</p>
+            <div class="footer--line"></div>
+        </div>
+        <div class="item4">
+            <p class="item4">© 2021 ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
